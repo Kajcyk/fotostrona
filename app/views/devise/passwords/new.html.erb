@@ -1,7 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading"><h2>Zapomniałeś hasło?</h2></div>
     <div class="panel-body">
-      <% if user_signed_in? %>
         <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
           <%= devise_error_messages! %>
 
@@ -14,9 +13,6 @@
             <%= f.submit "Wyślij mi instrukcję resetowania hasła" %>
           </div>
         <% end %>
-      <% else %>
-        <p>Najpierw musisz się zalogować!</p>
-      <% end %>
     </div>
   <div class="panel-footer"><%= render "devise/shared/links" %></div>
 </div>
